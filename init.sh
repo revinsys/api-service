@@ -15,7 +15,7 @@ then
         echo "Remove template git and init new git project"
         rm -rf ./.git
         git init > /dev/null
-        git remote add origin $1 > /dev/null
+        git remote add origin https://$1 > /dev/null
 
         echo "Initialize go project"
         go mod init $1 > /dev/null
