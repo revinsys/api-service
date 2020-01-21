@@ -9,8 +9,8 @@ then
 
         for file in $findFiles
         do
-                filePath=$(echo $file | sed 's/\.\/\//\.\//g')
-                sed -i "s/{GIT_PATH}/$gitPath/" $filePath
+                filePath=$(echo `pwd`$file | sed 's/\.\/\//\//g')
+                sed -i '' "s/{GIT_PATH}/$gitPath/" $filePath
         done
 
         echo "Remove template git and init new git project"
